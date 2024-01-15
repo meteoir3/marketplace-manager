@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Заказано на Вайлдберриз{% endblock %}
+
+{% block content %}
+    {% load custom_tags %}
+    {% include 'includes/revenue.html' %}
+    <br/>
+    <h1 class="title">
+        За сегодня:
+    </h1>
+    {% include "includes/ordered_card.html" %}
+
+{% endblock %}

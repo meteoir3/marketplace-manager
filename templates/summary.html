@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Вайлдберриз - продажи за 14 дней.{% endblock %}
+
+{% block content %}
+    {% load custom_tags %}
+    {% include 'includes/revenue.html' %}
+    <br/>
+    <h1 class="title">
+        Заказы за 14 дней
+    </h1>
+    <div class="buttons">
+        <a class="button" href="{% url "summary" %}">Все</a>
+        <a class="button" href="{% url "summary" %}?to_order=yes">Только те, которых мало</a>
+
+    </div>
+    {% include "includes/summary_card.html" %}
+
+{% endblock %}
